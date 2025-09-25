@@ -30,13 +30,6 @@ JavaScript (ES6) – functionality and API integration
 
 OpenWeatherMap API
 
-📌 How to Use
-
-Clone this repository:
-
-git clone https://github.com/your-username/global-weather.git
-
-
 Open the index.html file in your browser
 
 Enter a city name and explore the weather data
