@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Weather Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+   <link rel="shortcut icon" href="image/logo.png">
+</head>
+<body>
+  
+    <div class="animated-background">
+        <div class="floating-particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+
+    <header class="header">
+        <h1 class="title">
+            <i class="fas fa-globe-americas"></i>
+            Global Weather 
+        </h1>
+        
+        <h3 class="title">
+            <i class="fa-solid fa-user-secret"></i>
+            ORBI
+        </h3>
+        <p class="subtitle">Real-time weather data from around the world</p>
+    </header>
+
+    <main class="main-content">
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for any city worldwide...">
+                <button id="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <button id="location-btn" class="location-btn">
+                <i class="fas fa-crosshairs"></i>
+                Use My Location
+            </button>
+        </div>
+
+        <!-- Search Results Dropdown -->
+        <div class="search-results" id="search-results" style="display: none;">
+            <div class="results-container">
+                <h3 class="results-title">Select a location:</h3>
+                <div class="results-list" id="results-list">
+                    <!-- Search results will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="current-weather" id="current-weather" style="display: none;">
+            <div class="current-card clickable-card" id="current-card">
+                <div class="current-info">
+                    <h2 class="current-city"></h2>
+                    <p class="current-date"></p>
+                    <div class="current-temp"></div>
+                    <p class="current-desc"></p>
+                </div>
+                <div class="current-icon">
+                    <i class="weather-icon-large fas fa-sun"></i>
+                </div>
+                <div class="current-details">
+                    <div class="detail-item">
+                        <i class="fas fa-thermometer-half"></i>
+                        <span class="feels-like"></span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-tint"></i>
+                        <span class="humidity"></span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-wind"></i>
+                        <span class="wind"></span>
+                    </div>
+                </div>
+                <div class="forecast-hint">
+                    <i class="fas fa-calendar-week"></i>
+                    <span>Click to view 5-day forecast</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5-Day Forecast Section -->
+        <div class="forecast-section" id="forecast-section" style="display: none;">
+            <h2 class="section-title">
+                <i class="fas fa-calendar-week"></i>
+                5-Day Weather Forecast
+            </h2>
+            <div class="forecast-container" id="forecast-container">
+                <!-- Forecast cards will be inserted here -->
+            </div>
+            <button class="close-forecast-btn" id="close-forecast-btn">
+                <i class="fas fa-times"></i>
+                Close Forecast
+            </button>
+        </div>
+
+        <div class="world-weather">
+            <h2 class="section-title">
+                <i class="fas fa-earth-americas"></i>
+                Weather Around the World
+                <small style="display: block; font-size: 0.6em; opacity: 0.8; margin-top: 0.5rem;">
+                    Click on any city to view 5-day forecast
+                </small>
+            </h2>
+            <div class="weather-grid" id="weather-grid">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading global weather data...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Forecast Modal Overlay -->
+    <div class="modal-overlay" id="modal-overlay" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
